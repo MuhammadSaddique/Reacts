@@ -1,15 +1,21 @@
-
+import Header from "./Header";
+import Footer from "./Footer";
+import './app.css'
 
 function App() {
-  const app = ()=>{
-    console.log("app",app);
+  const app = () => {
+    console.log("app", app);
   }
 
   return (
     <>
-      <h1>Hello World</h1>
+      <Header />
+
+      <h1>Main Body</h1>
       <button onClick={app}>Click</button>
-      
+
+      <Footer />
+
     </>
   )
 }
