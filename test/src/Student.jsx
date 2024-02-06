@@ -1,11 +1,14 @@
-const Student = (props) =>{
+import React from "react";
 
-    return(
-        <>
-        <h1>{props.name}</h1>
-        <h1>{props.age}</h1>
-        </>
+const Movie = (prop) => {
+
+    return (
+        <div className="movie">
+            <img src={prop.img} alt="" />
+            <p>{prop.title}</p>
+            <p>Year: {prop.Year}</p>
+        </div>
     )
 }
 
-export default Student;
+export default Movie;

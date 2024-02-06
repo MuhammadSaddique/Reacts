@@ -1,13 +1,55 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: black;
+} */
+
+.app {
+  text-align: center;
+  background-color: #fff;
+  color: white;
+  min-height: 100vh;
+
 }
 
+.header {
+  background-color: rgb(26, 26, 146);
+  padding: 8px;
+}
 
-.App {
-  background-color: black;
-  color: white;
-  width: 100vh;
+h1 {
+  margin: 0;
+}
+
+.main {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.buttons {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: rgb(36, 36, 132);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.heading {
+  color: black;
+  font-size: 80px;
+  margin: 12px;
 }

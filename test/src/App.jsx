@@ -1,33 +1,29 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import Student from "./Student";
+import React, { useState } from "react";
 import './app.css'
 
 function App() {
-  const app = () => {
-    console.log("app", app);
+  const [num, setNum] = useState(1)
+  function inc() {
+    setNum(num + 1)
   }
+  function dec() {
+    setNum(num - 1)
+  }
+
 
   return (
     <div className="App">
       <Header />
+      <div className="main">
+        <h1 className="heading">{num}</h1>
+        <div className="buttons">
+          <button className="btn" onClick={inc}>Increment</button>
+          <button className="btn" onClick={dec}>decrement</button>
+        </div>
+      </div>
 
-      <Student
-        name="Saddique"
-        age={21}
-      />
-      <Student
-        name="Shafique"
-        age={18}
-      />
-      <Student
-        name="Rafique"
-        age={16}
-      />
-      {/* <h1>Main Body</h1>
-      <button onClick={app}>Click</button> */}
-
-      <Footer />
 
     </div>
   )
