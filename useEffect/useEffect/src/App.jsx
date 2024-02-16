@@ -1,19 +1,21 @@
-import React ,  { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react';
+import Header from './compontents/Header';
+import './index.css'
 
-import './App.css'
-
-function App() {
-  useEffect(() => {
-    console.log("useEffect called");
-  })
-  console.log("Function Body");
-
+const App = () => {
+    const [mark , setMark] = useState(80)
   return (
-    <>
-      {console.log("inside jsx")}
+    <div>
+      <h1>My marks are {mark}</h1>
+      <button onClick={()=>{
+        setMark(33)
+      }} className=''>Update</button>
+
+      <Header/>
+    </div>
 
 
-    </>
+
   )
 }
 

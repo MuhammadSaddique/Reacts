@@ -1,0 +1,106 @@
+/* ResponsiveNavbar.module.css */
+
+.navbar {
+    background: #333;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .mobileMenuButton {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .mobileMenuButton span {
+    height: 2px;
+    width: 25px;
+    background-color: white;
+    margin: 5px 0;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center the navigation links */
+  }
+  
+  .navLinks a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    margin-right: 2rem; /* Increase margin-right for more space between links */
+  }
+  
+  .searchBar {
+    display: flex;
+    align-items: center;
+    border-radius: 5px; /* Add border-radius */
+    overflow: hidden; /* Ensure border-radius is applied */
+  }
+  
+  .input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border: none; /* Remove default input border */
+    flex-grow: 1; /* Take remaining space in the searchBar */
+  }
+  
+  .searchIcon {
+    padding: 0.5rem;
+    background: #555;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 5px; /* Add border-radius to the search icon */
+    border-bottom-left-radius: 5px; /* Add border-radius to the search icon */
+  }
+  
+  @media (max-width: 768px) {
+    .navLinks {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0; /* Align to the right */
+      width: 100%;
+      background-color: #333;
+      text-align: center;
+      z-index: 1;
+    }
+  
+    .navLinks.active {
+      display: flex;
+    }
+  
+    .navLinks a {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .searchBar {
+      margin-left: 0;
+      margin-top: 1rem;
+      justify-content: flex-end;
+    }
+  
+    .mobileMenuButton {
+      display: flex;
+    }
+  }
+  
